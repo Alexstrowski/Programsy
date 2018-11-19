@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
-
+import 'hammerjs';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { TableListComponent } from './table-list/table-list.component';
@@ -22,6 +22,8 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import {MatFormFieldModule, MatIconModule, MatInputModule} from '@angular/material';
+
 
 @NgModule({
   imports: [
@@ -29,7 +31,12 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     FormsModule,
     HttpModule,
     ComponentsModule,
-    RouterModule,
+      MatFormFieldModule,
+      MatIconModule,
+      MatInputModule,
+      FormsModule,
+
+      RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
@@ -42,6 +49,13 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
       TableListComponent,
 
   ],
+    exports: [
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        FormsModule,
+
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,7 @@
-<div class="main-content margen-top">
+<div class="main-content total">
   <div class="container-fluid">
       <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 margen-top izquierda">
               <div class="card">
                   <div class="card-header card-header-danger">
                       <h4 class="card-title ">Inventario de medicamentos</h4>
@@ -147,8 +147,81 @@
                       </div>
                   </div>
               </div>
+              <div class="gg" (click)="agregar()">+</div>
           </div>
+          <div class="agregar ">
 
+              <div class="titulo">
+                  <div class="inline">X</div>
+                  <div class="inline">INGRESAR MEDICAMENTO</div>
+              </div>
+
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Nombre</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Laboratorio</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Código</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Tipo</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Fecha de vencimiento</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline ">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Stock</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Precio</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Descripción</mat-label>
+                      <input matInput >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+
+              <div class="centrar">
+                  <button type="button" class="btn btn-success ">INGRESAR</button>
+                  <button type="button" id="cancelar" class="btn btn-danger" (click)="cancelar()">CANCELAR</button>
+              </div>
+
+          </div>
       </div>
+
   </div>
+
 </div>
+
