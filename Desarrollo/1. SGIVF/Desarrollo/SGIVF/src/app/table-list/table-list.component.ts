@@ -102,6 +102,7 @@ export class TableListComponent implements OnInit {
         div_editar.className = 'editar aparecer';
         console.log(medicine);
     }
+
     actualizar(){
         console.log("Medicamento-seleccionado")
         console.log(this.medicinaLectura);
