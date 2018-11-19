@@ -30,6 +30,17 @@
 
     overflow: hidden;
 }
+.editar{
+    width: 350px;
+
+    Position: fixed;
+    right: -100%;
+    z-index: 120;
+
+    height: 100%;
+
+    overflow: hidden;
+}
 .total{
     max-height: 100%;
 }

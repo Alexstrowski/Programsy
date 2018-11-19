@@ -123,6 +123,76 @@
               </div>
 
           </div>
+          <div  class="editar">
+
+              <div class="titulo">
+                  <div class="inline">X</div>
+                  <div class="inline">EDITAR MEDICAMENTO</div>
+              </div>
+
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Nombre</mat-label>
+                      <input matInput  [ngModel]="medicina.name">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Laboratorio</mat-label>
+                      <input matInput [ngModel]="medicina.laboratory">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Código</mat-label>
+                      <input matInput [ngModel]="medicina.code">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Tipo</mat-label>
+                      <input matInput [ngModel]="medicina.type">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Fecha de vencimiento</mat-label>
+                      <input matInput [ngModel]="medicina.date_fin">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline ">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Stock</mat-label>
+                      <input matInput [ngModel]="medicina.stock">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Precio</mat-label>
+                      <input matInput [ngModel]="medicina.price">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Descripción</mat-label>
+                      <input matInput [ngModel]="medicina.description">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+
+              <div class="centrar">
+                  <button type="button" class="btn btn-success ">ACTUALIZAR</button>
+                  <button type="button" id="eliminar" class="btn btn-danger" (click)="eliminar()">ELIMINAR</button>
+              </div>
+
+          </div>
       </div>
 
   </div>

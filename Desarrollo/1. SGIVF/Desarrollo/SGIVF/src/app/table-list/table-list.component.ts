@@ -8,7 +8,17 @@ import {Router} from '@angular/router';
   styleUrls: ['./table-list.component.css']
 })
 export class TableListComponent implements OnInit {
-
+    medicina:Medicine={
+        id:0,
+        name:"",
+        laboratory:"",
+        code:0,
+        type:"",
+        date_fin:"",
+        stock:0,
+        price:0,
+        description:""
+    };
     medicines:Medicine[]=[];
     constructor(private _mecicineService:MedicineService,private router:Router) { }
 
@@ -27,7 +37,16 @@ export class TableListComponent implements OnInit {
   }
 
     editar(medicine: any) {
-        const div_agregar = document.querySelector('.agregar');
-        div_agregar.className = 'agregar aparecer';
+        this.medicina=medicine;
+        const div_editar = document.querySelector('.editar');
+        div_editar.className = 'editar aparecer';
+
+
+
+    }
+
+    eliminar() {
+        const div_editar = document.querySelector('.editar');
+        div_editar.className = 'editar ';
     }
 }
