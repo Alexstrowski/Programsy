@@ -1,5 +1,5 @@
 <div class="logo">
-    <a href="#" class="simple-text">
+    <a href="#" class=" simple-text">
         <div class="logo-img">
             <img src="/assets/img/angular2-logo-red.png"/>
         </div>
@@ -55,10 +55,16 @@
     </ul>-->
   </div>
     <ul class="nav">
-        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
-            <a class="nav-link" [routerLink]="[menuItem.path]">
-                <i class="material-icons">{{menuItem.icon}}</i>
-                <p>{{menuItem.title}}</p>
+        <li routerLinkActive="active" class=" nav-item">
+            <a class="nav-link" routerLink="dashboard">
+                <i class="material-icons">dashboard</i>
+                <p>Gráficas</p>
+            </a>
+        </li>
+        <li routerLinkActive="active" class=" nav-item">
+            <a class="nav-link" routerLink="table-list">
+                <i class="material-icons">content_paste</i>
+                <p>Inventario</p>
             </a>
         </li>
     </ul>

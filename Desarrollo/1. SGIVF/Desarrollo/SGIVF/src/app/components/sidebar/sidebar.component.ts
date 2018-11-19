@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
+import {DashboardComponent} from '../../dashboard/dashboard.component';
+import {UserProfileComponent} from '../../user-profile/user-profile.component';
+import {TableListComponent} from '../../table-list/table-list.component';
+import {TypographyComponent} from '../../typography/typography.component';
 declare const $: any;
 declare interface RouteInfo {
     path: string;
@@ -8,10 +12,11 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: Routes = [
-    { path: '/dashboard', title: 'Gráficas',  icon: 'dashboard', component: 'DashboardComponent' },
-    { path: '/user-profile', title: 'Ventas',  icon:'person', component: 'UserProfileComponent' },
-    { path: '/table-list', title: 'Inventario',  icon:'content_paste', component: 'TableListComponent' },
-    { path: '/typography', title: 'Ayuda',  icon:'library_books', component: 'TypographyComponent' }
+    {path: '', component: DashboardComponent, pathMatch: 'full'},
+    { path: '/dashboard', component: DashboardComponent },
+    { path: '/user-profile',  component: UserProfileComponent },
+    { path: '/table-list', component: TableListComponent },
+    { path: '/typography', component: TypographyComponent }
     /*{ path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
     { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
     { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
@@ -29,7 +34,6 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
   isMobileMenu() {
       if ($(window).width() > 991) {
