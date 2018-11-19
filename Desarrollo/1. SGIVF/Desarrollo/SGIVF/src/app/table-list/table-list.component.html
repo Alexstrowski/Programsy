@@ -10,7 +10,7 @@
                   <div class="card-body">
                       <div class="table-responsive">
                           <table class="table">
-                              <thead class=" text-primary">
+                              <thead class=" text-primary centrar">
                                   <th>
                                       ID
                                   </th>
@@ -27,121 +27,25 @@
                                       Vencimiento
                                   </th>
                               </thead>
-                              <tbody>
-                                  <tr>
+                              <tbody class="centrar">
+                                  <tr *ngFor="let medicine of medicines" (click)="editar(medicine)">
                                       <td>
-                                          1
+                                          {{medicine.id}}
                                       </td>
                                       <td>
-                                          Paracetamol
+                                          {{medicine.name}}
                                       </td>
                                       <td>
-                                          S/.1.25
+                                          {{medicine.price}}
                                       </td>
                                       <td>
-                                          451
+                                          {{medicine.stock}}
                                       </td>
                                       <td class="text-primary">
-                                          21/08/2019
+                                          {{medicine.date_fin}}
                                       </td>
                                   </tr>
-                                  <tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Paracetamol
-                                      </td>
-                                      <td>
-                                          S/.1.25
-                                      </td>
-                                      <td>
-                                          451
-                                      </td>
-                                      <td class="text-primary">
-                                          21/08/2019
-                                      </td>
-                                  </tr><tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Paracetamol
-                                      </td>
-                                      <td>
-                                          S/.1.25
-                                      </td>
-                                      <td>
-                                          451
-                                      </td>
-                                      <td class="text-primary">
-                                          21/08/2019
-                                      </td>
-                                  </tr><tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Paracetamol
-                                      </td>
-                                      <td>
-                                          S/.1.25
-                                      </td>
-                                      <td>
-                                          451
-                                      </td>
-                                      <td class="text-primary">
-                                          21/08/2019
-                                      </td>
-                                  </tr><tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Paracetamol
-                                      </td>
-                                      <td>
-                                          S/.1.25
-                                      </td>
-                                      <td>
-                                          451
-                                      </td>
-                                      <td class="text-primary">
-                                          21/08/2019
-                                      </td>
-                                  </tr><tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Paracetamol
-                                      </td>
-                                      <td>
-                                          S/.1.25
-                                      </td>
-                                      <td>
-                                          451
-                                      </td>
-                                      <td class="text-primary">
-                                          21/08/2019
-                                      </td>
-                                  </tr><tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Paracetamol
-                                      </td>
-                                      <td>
-                                          S/.1.25
-                                      </td>
-                                      <td>
-                                          451
-                                      </td>
-                                      <td class="text-primary">
-                                          21/08/2019
-                                      </td>
-                                  </tr>
+
                               </tbody>
                           </table>
                       </div>

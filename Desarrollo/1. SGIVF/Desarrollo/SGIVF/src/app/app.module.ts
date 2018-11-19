@@ -23,6 +23,7 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {MatFormFieldModule, MatIconModule, MatInputModule} from '@angular/material';
+import {MedicineService} from './medicine.service';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import {MatFormFieldModule, MatIconModule, MatInputModule} from '@angular/materi
         FormsModule,
 
     ],
-  providers: [],
+  providers: [MedicineService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

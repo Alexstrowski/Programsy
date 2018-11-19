@@ -67,3 +67,7 @@
     margin-top: 20px;
     text-align: center;
 }
+tbody :hover{
+    background-color: rgba(120,114,119,0.08);
+    cursor: pointer;
+}
