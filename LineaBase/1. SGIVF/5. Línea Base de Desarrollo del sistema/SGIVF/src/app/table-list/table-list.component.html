@@ -1,0 +1,191 @@
+<div class="main-content total">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 margen-top izquierda">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Inventario de medicamentos</h4>
+                      <p class="card-category">Lista de medicamentos en stock</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary centrar">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Código
+                                  </th>
+                                  <th>
+                                      Nombre
+                                  </th>
+                                  <th>
+                                      Precio
+                                  </th>
+                                  <th>
+                                      Cantidad
+                                  </th>
+                                  <th>
+                                      Vencimiento
+                                  </th>
+                              </thead>
+                              <tbody class="centrar">
+
+                                  <tr *ngFor="let medicine of medicines" (click)="editar(medicine)">
+                                      <td>
+                                         {{medicine.id}}
+                                      </td>
+                                      <td>
+                                          {{medicine.codigo}}
+                                      </td>
+                                      <td>
+                                          {{medicine.descripcion}}
+                                      </td>
+                                      <td>
+                                          {{medicine.precioReferencial}}
+                                      </td>
+                                      <td>
+                                          {{medicine.stock}}
+                                      </td>
+                                      <td class="text-primary">
+                                          {{medicine.fechaVencimiento}}
+                                      </td>
+                                  </tr>
+
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <div class="gg" (click)="agregar()">+</div>
+          </div>
+          <div class="agregar ">
+
+              <div class="titulo">
+                  <div class="inline" (click)="cerrarIngreso()">X</div>
+                  <div class="inline">INGRESAR MEDICAMENTO</div>
+              </div>
+       
+          
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Nombre</mat-label>
+                      <input matInput  [ngModel]="medicinaInsertar.descripcion"
+                      (ngModelChange)="medicinaInsertar.descripcion = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Código</mat-label>
+                      <input matInput [ngModel]="medicinaInsertar.codigo"
+                      (ngModelChange)="medicinaInsertar.codigo = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Tipo</mat-label>
+                      <input matInput [ngModel]="medicinaInsertar.tipo"
+                      (ngModelChange)="medicinaInsertar.tipo = $event" >
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Fecha de vencimiento</mat-label>
+                      <input matInput [ngModel]="medicinaInsertar.fechaVencimiento"
+                      (ngModelChange)="medicinaInsertar.fechaVencimiento = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline ">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Stock</mat-label>
+                      <input matInput [ngModel]="medicinaInsertar.stock"
+                      (ngModelChange)="medicinaInsertar.stock = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Precio Referencial</mat-label>
+                      <input matInput [ngModel]="medicinaInsertar.precioReferencial"
+                      (ngModelChange)="medicinaInsertar.precioReferencial = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+                </p>
+
+              <div class="centrar">
+                  <button type="button" class="btn btn-success " (click)="insertar()">INGRESAR</button>
+                  <button type="button" id="cancelar" class="btn btn-danger" (click)="cancelar()">CANCELAR</button>
+              </div>
+
+          </div>
+          <div  class="editar">
+
+              <div class="titulo">
+                  <div class="inline" (click)="cerrarEdicion()">X</div>
+                  <div class="inline">EDITAR MEDICAMENTO</div>
+              </div>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Nombre</mat-label>
+                      <input matInput  [ngModel]="medicinaLectura.descripcion"
+                      (ngModelChange)="medicinaLectura.descripcion = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Código</mat-label>
+                      <input matInput [ngModel]="medicinaLectura.codigo"
+                      (ngModelChange)="medicinaLectura.codigo = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Tipo</mat-label>
+                      <input matInput [ngModel]="medicinaLectura.tipo"
+                      (ngModelChange)="medicinaLectura.tipo = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Fecha de vencimiento</mat-label>
+                      <input matInput [ngModel]="medicinaLectura.fechaVencimiento"
+                      (ngModelChange)="medicinaLectura.fechaVencimiento= $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline ">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Stock</mat-label>
+                      <input matInput [ngModel]="medicinaLectura.stock"
+                      (ngModelChange)="medicinaLectura.stock = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <p class="inputs inline derecha">
+                  <mat-form-field class="chico" appearance="outline">
+                      <mat-label>Precio</mat-label>
+                      <input matInput [ngModel]="medicinaLectura.precioReferencial"
+                      (ngModelChange)="medicinaLectura.precioReferencial = $event">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+              </p>
+              <div class="centrar">
+                  <button type="button" class="btn btn-success " (click)="actualizar(medicina)">ACTUALIZAR</button>
+                  <button type="button" id="eliminar" class="btn btn-danger" (click)="eliminar()">ELIMINAR</button>
+              </div>
+
+          </div>
+      </div>
+
+  </div>
+
+</div>
+

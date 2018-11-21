@@ -1,0 +1,84 @@
+.margen-top{
+    margin-top: 20px;
+}
+.gg{
+    cursor: pointer;
+    Position : fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    Border-radius: 50%;
+    background-color: orangered !important;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 35px;
+
+}
+.agregar{
+
+    width: 350px;
+
+    Position: fixed;
+    right: -100%;
+    z-index: 120;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+.editar{
+    width: 350px;
+
+    Position: fixed;
+    right: -100%;
+    z-index: 120;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+.total{
+    max-height: 100%;
+}
+.aparecer{
+    right: 0%;
+    background-color: whitesmoke;
+}
+.inputs{
+    margin: 5px 40px;
+    outline: 0;
+}
+.redondeado{
+    border-radius: 5px;
+    width: 50px;
+}
+.izquierda{
+    text-align: left;
+}
+.inline{
+    display: inline-flex;
+    margin-right: 5px !important;
+}
+.chico{
+    width: 128px;
+}
+.derecha{
+    margin-left: 5px;
+}
+.titulo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.centrar{
+    margin-top: 20px;
+    text-align: center;
+}
+tbody :hover{
+    background-color: rgba(120,114,119,0.08);
+    cursor: pointer;
+}
